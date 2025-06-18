@@ -41,6 +41,13 @@ html, body {
    margin-top: 100px;
 }
 
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+
 
 
 /* Hero Content */
