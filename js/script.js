@@ -69,3 +69,13 @@ if (checkbox1 && checkbox2 && btn) {
     if (btn.classList.contains('disabled')) e.preventDefault();
   });
 }
+
+function openPopup() {
+  document.body.classList.add('no-scroll');
+  // показываем попап
+}
+
+function closePopup() {
+  document.body.classList.remove('no-scroll');
+  // скрываем попап
+}
