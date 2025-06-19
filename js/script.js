@@ -76,11 +76,23 @@ function openEsimPopup() {
   document.body.classList.add('no-scroll');
   document.documentElement.classList.add('no-scroll');
 }
+
 function closeEsimPopup() {
   popupOverlay.style.display = 'none';
   popup.style.display = 'none';
   document.body.classList.remove('no-scroll');
   document.documentElement.classList.remove('no-scroll');
 }
+
+document.querySelectorAll('.close-popup-on-anchor').forEach(link => {
+  link.addEventListener('click', function () {
+    closeEsimPopup();
+    // Без setTimeout якорь не всегда срабатывает, если попап оверлеем закрывает страницу
+    setTimeout(() => {
+      location.hash = this.getAttribute('href');
+    }, 20);
+  });
+});
+
 
 
