@@ -70,12 +70,17 @@ if (checkbox1 && checkbox2 && btn) {
   });
 }
 
-function openPopup() {
+function openEsimPopup() {
+  popupOverlay.style.display = 'flex';
+  popup.style.display = 'flex';
   document.body.classList.add('no-scroll');
-  // показываем попап
+  document.documentElement.classList.add('no-scroll');
+}
+function closeEsimPopup() {
+  popupOverlay.style.display = 'none';
+  popup.style.display = 'none';
+  document.body.classList.remove('no-scroll');
+  document.documentElement.classList.remove('no-scroll');
 }
 
-function closePopup() {
-  document.body.classList.remove('no-scroll');
-  // скрываем попап
-}
+
